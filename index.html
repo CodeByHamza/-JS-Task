@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript</title>
+</head>
+
+<body onclick="time1()">
+    <p class="p">Click Anywhere on Window To Get Exact Time And Location</p>
+    <h3 class="h3"></h3>
+    <h1 class="h1"></h1>
+    <h2 class="h2"></h2>
+    <script>
+        let c = document.querySelector("h1");
+        let d = document.querySelector("h2");
+        let e = document.querySelector("h3");
+
+
+
+        document.onclick = (a) => {
+            let now = new Date();
+            let type = now.toLocaleTimeString()
+            let time2 = type;
+            console.log(time2)
+            document.querySelector("h1").innerHTML = (`X: ${a.clientX}`);
+            document.querySelector("h2").innerHTML = (`Y: ${a.clientY}`);
+            document.querySelector("h3").innerHTML = time2
+
+        }
+    </script>
+</body>
+
+</html>
